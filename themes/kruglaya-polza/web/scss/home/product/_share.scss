@@ -1,0 +1,66 @@
+.product-view-body{
+    padding-bottom: 40px;
+    border-bottom: 1px solid $color-gray;
+}
+.product-modal-share{
+    padding-top: 20px;
+}
+.share-box{
+    width: 50%; 
+    p{
+        padding-bottom: 10px;
+    }
+}
+.share-wrap{
+    position: relative;
+    width: max-content;
+}
+.ya-share2__container_shape_round .ya-share2__badge{
+    border-radius: 3px !important;
+}
+.social-share-more{
+    margin: 2px 0 0 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    border: 1px solid $color-gray;
+    color: $color-text;
+}
+.social-share-tooltip{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -8px;
+    max-width: calc(100% + 10px);
+    width: auto;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    background: #ffffff;
+    border: 1px solid #D5D5D5;
+    -ms-box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    -o-box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    padding: 5px;
+    transform: translateY(-100%);
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        right: 6px;
+        bottom: -12px;
+        border: 6px solid transparent;
+        border-top: 6px solid #fff;
+    }
+    &.active{
+        opacity: 1;
+        pointer-events: all;
+        height: auto;
+        transition: opacity 0.3s ease;
+    }
+}
+
+@media (max-width: 767px){
+    .share-box{
+        width: auto;
+    }
+}

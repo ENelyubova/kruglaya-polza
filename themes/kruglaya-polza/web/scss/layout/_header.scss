@@ -1,0 +1,158 @@
+ .header{
+	position: relative;
+	padding: 10px 0;
+    background-color: white;
+	z-index: 2;
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -7px;
+		left: 0;
+		background-repeat: repeat-x;
+		width: 100%;
+		height: 21px;
+		z-index: -1;
+	}
+	&-logo{
+		margin-right: 40px;
+	}
+	&-catalog{
+		margin-right: 60px;
+		a{
+			text-transform: uppercase;
+		}
+	}
+	&-menu{
+		width: 58%;
+		padding: 0 10px;
+	}
+	&-wholesale{
+		a{
+			text-transform: uppercase;
+		}
+	}
+	&-search{
+		position: absolute;
+		right: 120px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.header-home{
+	&:after{
+		background-image: url(../images/header/line-white.png);
+	}
+}
+.header-page{
+	&:after{
+		background-image: url(../images/header/line-border.png);
+	}
+}
+.logo{
+	img{
+		width: 110px;
+		height: 110px;
+	}
+}
+
+
+@media (max-width: 1860px){
+	.header{
+		&-menu{
+			width: 54%;
+		}
+		&-wholesale{
+			margin-right: 100px;
+		}
+	}
+}
+@media (max-width: 1710px){
+	.header{
+		&-menu{
+			width: 54%;
+		}
+		&-wholesale{
+			margin-right: 140px;
+		}
+	}
+}
+@media (max-width: 1500px){
+	.header{
+		&-logo{
+			margin-right: 25px;
+		}
+		&-catalog{
+			margin-right: 40px;
+		}
+		&-search{
+			img{
+				width: 30px;
+			}
+		}
+	}
+	.logo img{
+		width: 90px;
+		height: 90px;
+	}
+}
+@media (max-width: 1440px){
+	.header{
+		&-catalog{
+			margin-right: 25px;
+		}
+	}
+}
+@media (max-width: 1270px){
+	.header{
+		&-menu{
+			width: auto;
+		}
+		&-search{
+			right: 110px;
+		}
+	}
+	.logo img{
+		width: 75px;
+		height: 75px;
+	}
+}
+@media (max-width: 1000px){
+	.header{
+		&-catalog{
+			margin-right: auto;
+		}
+		&-menu{
+			display: none;
+		}
+		&-search{
+			img{
+				width: 26px;
+			}
+		}
+	}
+	.logo img{
+		width: 65px;
+		height: 65px;
+	}
+}
+@media (max-width: 767px){
+	.header{
+		&-catalog{
+			display: none;
+		}
+		&-wholesale{
+			display: none;
+		}
+	}
+	.logo img{
+		width: 55px;
+		height: 55px;
+	}
+}
+@media (max-width: 580px){
+	.header{
+		&-search{
+			right: 85px;
+		}
+	}
+}

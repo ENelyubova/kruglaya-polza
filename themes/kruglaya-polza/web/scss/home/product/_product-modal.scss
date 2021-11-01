@@ -1,0 +1,198 @@
+.modal-product{
+    .modal-dialog {
+        position: fixed;
+        z-index: 1050;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 35px 30px;
+        max-height: 95%;
+        // height: 670px;
+        background: #fff;
+        transform: translate(-50%, -50%);
+        transition: all .3s linear;
+        pointer-events: none;
+        opacity: 0 !important;
+        overflow: hidden;
+        overflow-y: auto;
+        .product-view{
+            position: relative;
+            top: auto;
+            left: auto;
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+    .modal-close{
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+    }
+    #productModal-loading{
+        position: absolute;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,1);
+        border-radius: 20px;
+        &:after{
+            content: '';
+            position: absolute;
+            top: calc(50% - 70px);
+            left: calc(50% - 35px);
+            z-index: 999;
+            width: 70px;
+            height: 70px;
+            background: url("../images/ajax-loading.gif") center center no-repeat;
+        }
+    }
+    &.active {
+        .modal-close{
+            pointer-events: all;
+            opacity: 1;
+        }
+        .modal-dialog{
+            opacity: 1 !important;
+            pointer-events: all !important;
+            .product-view{
+                pointer-events: all;
+                opacity: 1;
+            }
+        }
+        &:after{
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+    &:after{
+        content: '';
+        position: fixed;
+        z-index: 1049;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        transition: all .3s linear;
+    }
+}
+.modal-dialog::-webkit-scrollbar-track {
+    background-color:rgba(255,255,255,1);
+}
+.modal-dialog::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color:#D9DDE8;
+    box-shadow:0px 1px 1px #fff inset;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.modal-dialog::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:5px;
+    height:0px
+}
+.modal-dialog::-webkit-scrollbar{
+    width: 5px;
+}
+
+.modal-product{
+    .productView__img{
+        width: 35%;
+        img{
+            max-height: 428px;
+        }
+    }
+    .slick-arrow{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        top: auto;
+        transform: translateY(0);
+        border: 1px solid $color-gray;
+    }
+    .slick-prev{
+        margin-right: 10px;
+        left: auto;
+    }
+    .slick-next{
+        margin-right: 10px;
+        right: auto;
+    }
+}
+.product-view-body{
+    padding-bottom: 40px;
+    border-bottom: 1px solid $color-gray;
+}
+.product-modal-nav{
+    width: 50%;
+    span{
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1440px){
+	.modal-product{
+        .modal-dialog {
+            width:940px;
+        }
+    }
+}
+@media (max-width: 1000px){
+	.modal-product{
+        .modal-dialog {
+            top: 2.5%;
+            width: 90%;
+            transform: translate(-50%, 0);
+        }
+        &.active {
+            .product-view-close{
+                position: fixed;
+                top: 40px;
+                right: 30px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+	.modal-product{
+        .modal-dialog {
+            padding: 35px 25px;
+        }
+        &.active {
+            .modal-dialog{
+                .category-view{
+                    padding: 20px 15px;
+                }
+            }
+        }
+        .productView__description{
+            font-size: 14px;
+        }
+    }
+    .product-modal-nav{
+        display: none;
+    }
+}
+@media (max-width: 640px){
+    .modal-product{
+        .modal-dialog {
+            width: 95%;
+        }
+        .productView{
+            &__img{
+                width: 100%;
+            }
+            &__info{
+                width: 100%;
+                margin-bottom: 15px;
+                padding-left: 0;
+                order: -1;
+            }
+        }
+    }
+}

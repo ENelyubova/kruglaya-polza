@@ -1,0 +1,69 @@
+.page-error{
+    padding: 0 0 100px;
+    background-image: url(../images/404/bg-404.jpg);
+    background-repeat: repeat;
+    &__text{
+        position: relative;
+        z-index: 5;
+        a{
+            text-decoration: underline;
+            font-weight: 700;
+            color: $color-black;
+        }
+    }
+    &__title{
+        padding-bottom: 15px;
+        @include fontF($familyMedium, 60px, 700, $color-black);
+    }
+    &__img{
+        position: relative;
+        width: 648px;
+        height: 330px;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 384px;
+            left: 0;
+            top: -25px;
+        }
+    }
+}
+
+
+@media (max-width: 1600px){
+    .page-error{
+        &__title{
+            font-size: 50px;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .page-error{
+        &__title{
+            font-size: 40px;
+        }
+        &__img{
+            height: 250px;
+            img{
+                height: 300px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .page-error{
+        padding: 0 0 60px;
+        &__title{
+            font-size: 30px;
+        }
+        &__img{
+            width: auto;
+            height: auto;
+            img{
+                position: relative;
+                top: auto;
+                height: auto;
+            }
+        }
+    }
+}

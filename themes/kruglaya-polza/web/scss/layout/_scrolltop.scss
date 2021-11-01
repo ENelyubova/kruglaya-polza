@@ -1,0 +1,40 @@
+/* скролл-топ */
+.no-touch .cd-top:hover {
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top{
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    position: fixed;
+    bottom: 100px;
+    left: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    border: 1px solid $color-brown;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(../images/icon/top.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s 0s, visibility 0s .3s;
+    z-index: 1000;
+    &:hover{
+        opacity: 1;
+    }
+}
+.cd-is-visible{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-fade-out{
+    opacity: .5;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+@media (max-width: 1000px){
+    .cd-top{
+        display: none;
+    }
+}

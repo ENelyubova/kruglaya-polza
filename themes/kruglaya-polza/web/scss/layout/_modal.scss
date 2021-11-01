@@ -1,0 +1,229 @@
+.help-block{
+    margin-bottom: 0;
+}
+.error{
+    color: $color-red;
+}
+.has-error .form-control{
+    box-shadow: none !important;
+}
+.compensate-for-scrollbar{
+    margin-right: 0 !important;
+    padding-right: 17px;
+}
+.modal-open{
+    overflow: hidden;
+    padding-right: 17px;
+    @media (max-width: 1000px){
+        padding-right: 0;
+    }
+}
+.modal{
+    .control-label{
+        display: none;
+    }
+    &-wrap{
+        height: 100%;
+    }
+    &-dialog{
+        margin: 100px auto;
+        width: 1006px;
+        border-radius: 10px;
+        overflow: hidden;
+        &-msg{
+            margin: 80px auto;
+            width: 355px;
+            .modal-header{
+                padding: 30px 40px 0;
+                h3{
+                    font-size: 24px;
+                }
+            }
+            .modal-body{
+                padding: 20px 40px 30px;
+            }
+        }
+    }
+    &-content{
+        flex: 1 1 auto;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        &_call{
+            width: 790px;
+        }
+        &_recipes{
+            padding: 50px 40px;
+        }
+    }
+    &-img{
+        position: relative;
+        width: 380px;
+        background-image: url(../images/modal.jpg);
+        background-size: cover;
+    }
+    &-header{
+        padding: 50px;
+        border-bottom: none;
+        background: #fff;
+        background-size: cover;
+    }
+    h3{
+        @include fontF($familyMedium, 35px, 400, $color-black);
+    }
+    &-close{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: $color-gray;
+        cursor: pointer;
+        z-index: 10;
+        &-mobile{
+            display: none;
+        }
+    }
+    &-body{
+        padding: 0 50px 50px;
+        input{
+            height: 35px;
+        }
+        .form-captcha{
+            position: relative;
+            // left: -18px;
+            top: 0px;
+            display: block;
+            margin: 0;
+            /* transform: scale(0.85); */
+        }
+        .form-button{
+            margin-top: 20px;
+        }
+        .btn{
+            justify-content: center;
+            margin-right: 20px;
+        }
+    }
+}
+.btn-close-modal{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.terms_of_use{
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #959595;
+    a{
+        color: #959595;
+        text-decoration: underline !important;
+    }
+}
+
+
+@media (max-width: 1600px){
+    .modal{
+        &-header{
+            padding: 40px 50px;
+        }
+        h3{
+            font-size: 38px;
+        }
+    }
+}
+@media (max-width: 1440px){
+    .modal{
+        &-content{
+            // width: 1000px;
+        }
+        &-img{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .modal{
+        &-dialog {
+            margin: 50px auto;
+            &_call{
+                width: 335px;
+            }
+        }
+        &-content{
+            &_call{
+                width: 300px;
+            }
+        }
+        &-close{
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &-header{
+            padding: 35px 40px 15px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        &-body{
+            padding: 8px 40px 30px;
+            .form-captcha{
+                left: -18px;
+                transform: scale(0.85);
+            }
+            .form-button{
+                flex-direction: column;
+            }
+            .btn{
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+    .terms_of_use{
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px){
+    .modal-close{
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+    }
+    .modal{
+        &-dialog{
+            &-msg{
+                width: 300px;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    .modal{
+        &-dialog{
+            &_call{
+                width: 300px;
+            }
+        }
+        &-header{
+            padding: 30px 20px 0;
+        }
+        &-heading{
+            h3{
+                font-size: 21px;
+            }
+        }
+        &-body{
+            padding: 8px 20px 20px;
+        }
+    }
+}

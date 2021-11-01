@@ -1,0 +1,123 @@
+.contacts-collapse{
+    &__item{
+        padding: 25px 0;  
+        &:first-child{
+            border-top: 1px solid $color-gray;
+        }
+        &:not(:last-child){
+            border-bottom: 1px solid $color-gray;
+        }
+    }
+    &__label{
+        width: 50%;
+        padding-right: 50px;
+    }
+    &__info{
+        width: 50%;
+        font-family: $familyMedium;
+        font-weight: 600;
+        font-size: 30px;
+        color: $color-black;
+        a[href^=tel], a[href^=mailto]{
+            font-size: 40px;
+            color: $color-black;
+        }
+        a[href^=mailto]{
+            border-bottom: 2px solid black;
+            &:hover{
+                border-bottom: 2px solid transparent;
+            }
+        }
+    }
+}
+.phone-item{
+    &:first-child{
+        margin-right: 70px;
+    }
+    &:last-child{
+        margin: 8px 0;
+    }
+}
+.page-map{
+    margin-top: 20px;
+    iframe{
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 1600px){
+    .contacts-collapse{
+        &__info{
+            font-size: 25px;
+            a[href^=tel], a[href^=mailto]{
+                font-size: 35px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px){
+    .contacts-collapse{
+        &__item{
+            padding: 20px 0;
+        }
+        &__info{
+            a[href^=tel], a[href^=mailto]{
+                font-size: 30px;
+            }
+        }
+    }
+    .contacts-map{
+        iframe{
+            height: 400px;
+        }
+    }
+}
+@media (max-width: 1270px){
+    .contacts-collapse{
+        &__label{
+            br{
+                display: none;
+            }
+        }
+        &__info{
+            a[href^=tel], a[href^=mailto]{
+                font-size: 24px;
+            }
+        }
+    }
+}
+@media (max-width: 1000px){
+    .contacts-collapse{
+        &__item{
+            padding: 20px 0;
+        }
+        &__info{
+            font-size: 16px;
+        }
+    }
+    .phone-item{
+        &:first-child{
+            margin-right: 35px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .contacts-collapse{
+        &__label{
+            width: 100%;
+            margin-bottom: 15px;
+            padding-right: 0;
+        }
+        &__info{
+            width: 100%;
+            a[href^=tel], a[href^=mailto]{
+                font-size: 18px;
+            }
+        }
+    }
+    .contacts-map{
+        iframe{
+            height: 300px;
+        }
+    }
+}
